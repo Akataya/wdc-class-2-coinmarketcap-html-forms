@@ -9,7 +9,7 @@ Also we'll work with HTML forms and create/delete objects in our database based 
 
 ## 1) Adding a new Exchange model
 
-In order to practice some relationships between models through ForeignKeys, we'll create a brand new `Exchange` model that will be linked to our already created `Cryptocurrency`. 
+In order to practice some relationships between models through ForeignKeys, we'll create a brand new `Exchange` model that will be linked to our already created `Cryptocurrency`.
 
 For simplicity, we'll assume that each Cryptocurrency will be in sale in one Exchange at a time.
 
@@ -25,18 +25,15 @@ Also we'll extend our Search input in order to allow searching both for Cryptocu
 
 As a second step, we want the users of our app to be able to create new Cryptocurrencies. For that we need to create an HTML form that will be in charged of sending input data from the user, and the proper view will handle the creation (with previous validation) of the object.
 
-Add a button in the main page, with a link to `/create`. Should look something like:
+Add a button in the main page, with a link to `/create-currency`. Should look something like:
 
 <img width="1038" alt="screen shot 2019-01-01 at 16 46 15" src="https://user-images.githubusercontent.com/2788551/50575876-e22fd180-0de4-11e9-880f-ef2eab042d70.png">
 
-
-In the `/create-currency` template, we will render a form with an input for each Cryptocurrency model field. Check the following screenshot for extra details:
+In the `/create-currency` template, we will render a form using plain HTML, with an input for each Cryptocurrency model field. We'll use [Bootstrap](https://getbootstrap.com/) to make the form prettier. Check the following screenshot for extra details:
 
 <img width="868" alt="screen shot 2019-01-01 at 16 49 23" src="https://user-images.githubusercontent.com/2788551/50575892-43f03b80-0de5-11e9-9846-73891049bf35.png">
 
 If any of the required inputs is not completed, the view should re-render the template sending the errors that must be shown
-
-*hint: check the `django-bootstrap4` library for easy integration of Bootstramp v4 in templates*
 
 ## 3) Deleting coins
 
