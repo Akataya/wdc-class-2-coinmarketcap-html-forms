@@ -23,6 +23,4 @@ urlpatterns = [
 
     path('', views.index, name='index'),
     path('currencies/<int:coin_id>', views.detail, name='cryptocurrencies-detail'),
-    path('delete-currency/<int:coin_id>', views.delete, name='cryptocurrencies-delete'),
-    path('create-currency/', views.create, name='cryptocurrencies-create'),
 ]

@@ -48,7 +48,6 @@
               </div>
               <div class="col-7">
                 <button type="submit" class="btn btn-primary">Search</button>
-                <a class="btn btn-success btn-primary float-right" href="/create-currency" role="button"><i class="fa fa-plus"></i> Add new coin</a>
               </div>
             </div>
           </div>
@@ -73,7 +72,6 @@
               <th>Volume (24h)</th>
               <th>Circulating supply</th>
               <th>Change (24h)</th>
-              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -90,11 +88,6 @@
               <td>${{coin.volume_usd_24h|floatformat|intcomma}}</td>
               <td>{{coin.available_supply|floatformat|intcomma}} {{coin.symbol}}</td>
               <td class="{% if coin.percent_change_24h > 0.0 %}change-up{% else %}change-down{% endif%} text-center">{{coin.percent_change_24h}}%</td>
-              <td class="text-center">
-                <a href="/delete-currency/{{coin.id}}">
-                  <i style="color: crimson;" title='Delete' class="fas fa-trash"></i>
-                </a>
-              </td>
             </tr>
             {% endfor %}
           </tbody>
