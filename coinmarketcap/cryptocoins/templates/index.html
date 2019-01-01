@@ -62,7 +62,6 @@
               {% endif %}
 
               <th>Name</th>
-              <th>Exchange</th>
               <th>Market Cap</th>
               {% if order_param == 'price' and order_direction == 'asc' %}
                 <th><a href="?order_param=price&order_direction=desc">Price <span class="oi" data-glyph="sort-descending"></span></a></th>
@@ -82,7 +81,6 @@
                 <img src="https://raw.githubusercontent.com/atomiclabs/cryptocurrency-icons/master/128/color/{{coin.symbol|lower}}.png" alt="" width="16">
                 <a href="{% url "cryptocurrencies-detail" coin_id=coin.id %}">{{coin.name}}</a>
               </td>
-              <td class="text-center">{{coin.exchange.name}}</td>
               <td>${{coin.market_cap_usd|floatformat|intcomma}}</td>
               <td>${{coin.price_usd|intcomma}}</td>
               <td>${{coin.volume_usd_24h|floatformat|intcomma}}</td>

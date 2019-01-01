@@ -1,7 +1,7 @@
 from django.db.models import Q
 from django.shortcuts import render, redirect, get_object_or_404
 
-from cryptocoins.models import Cryptocurrency, Exchange
+from cryptocoins.models import Cryptocurrency
 
 
 def index(request):
@@ -10,12 +10,6 @@ def index(request):
     order_by = 'rank'
 
     coins = Cryptocurrency.objects.all()
-
-    search = request.GET.get('search')
-    if search:
-        coins = coins.filter(
-            Q(name__icontains=search) | Q(exchange__name__icontains=search)
-        )
 
     if order_param == 'price':
         order_by = 'price_usd'
