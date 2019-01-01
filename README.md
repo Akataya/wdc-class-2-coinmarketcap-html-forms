@@ -1,3 +1,5 @@
+<img align="right" width="120" alt="rmotr.com" src="https://user-images.githubusercontent.com/7065401/45454218-80bee800-b6b9-11e8-97bb-bb5e7675f440.png">
+
 # Coinmarketcap Relationships and HTML Forms
 
 Remember the [https://coinmarketcap.com/](https://coinmarketcap.com/) clone we did in our [previous class](https://github.com/rmotr-curriculum/wdc-class-1-coinmarketcap-clone)? 💪 Today we will augment it with some more Django functionalities. 🙌
