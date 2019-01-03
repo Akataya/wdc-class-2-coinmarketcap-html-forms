@@ -8,6 +8,24 @@ We want you to learn how to make relationships between models and the way that D
 
 Also we'll work with HTML forms and create/delete objects in our database based on incoming actions that come from the templates.
 
+## Setting up the environment
+
+Before we get started with Django, we need to make sure our local Python environment is properly set up. For that, we will use `virtualenv` and the awesome `virtualenvwrapper` tool.
+
+*note: this app has been developed using Python 3.5*
+
+```bash
+$ mkvirtualenv -p $(which python3.5) coinmarketcap
+$ pip install -r requirements/base.txt
+```
+
+You can now run the development server and point the browser to the correct URL:
+
+```bash
+$ make runserver
+```
+
+_Note: If you're using RMOTR Notebooks, you don't need to create a virtualenv_
 
 ## 1) Adding a new Exchange model
 
